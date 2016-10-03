@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title></title>
+
+    <!-- Meta tags -->
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!--javascript -->
+    <script src="js/jquery.js"></script>
+    <script src="js/script.js" type="text/javascript"></script>
+
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+
+  </head>
+
+  <body>
+
+      <header>
+        <div>hej</div>
+        <div>hej</div>
+        <div>hej</div>
+        <div>hej</div>
+        <div>hej</div>
+      </header>
+
+      <div class="video-container"><!-- Borde ha row -->
+        <div class="video1"><!-- Borde ha column -->
+          <div class="button-container"><!-- Borde ha row -->
+            <button class="btn btn-info button" onclick="setSpeed1('160')">160 kb/s</button>
+            <button class="btn btn-info button" onclick="setSpeed1('256')">256 kb/s</button>
+            <button class="btn btn-info button" onclick="setSpeed1('512')">512 kb/s</button>
+            <button class="btn btn-info button" onclick="setSpeed1('1000')">1000 kb/s</button>
+          </div>
+          <div class="button-container">
+            <button class="btn btn-success button" onclick="setSite1('google')">Google</button>
+            <button class="btn btn-success button" onclick="setSite1('microsoft')">Microsoft</button>
+            <button class="btn btn-success button" onclick="setSite1('newyorktimes')">New York Times</button>
+            <button class="btn btn-success button" onclick="setSite1('youtube')">Youtube</button>
+          </div>
+
+          <div class="video-info">
+            <div id="status1"></div>
+          </div>
+
+          <div>
+            <video id="video1" controls>
+              <source id="source1" src="" type="video/mp4">
+            </video>
+          </div>
+
+        </div>
+
+        <div class="video2">
+          <div class="button-container"><!-- Borde ha row -->
+            <button class="btn btn-info button" onclick="setSpeed2('160')">160 kb/s</button>
+            <button class="btn btn-info button" onclick="setSpeed2('256')">256 kb/s</button>
+            <button class="btn btn-info button" onclick="setSpeed2('512')">512 kb/s</button>
+            <button class="btn btn-info button" onclick="setSpeed2('1000')">1000 kb/s</button>
+          </div>
+          <div class="button-container">
+            <button class="btn btn-warning button" onclick="setSite2('google')">Google</button>
+            <button class="btn btn-warning button" onclick="setSite2('microsoft')">Microsoft</button>
+            <button class="btn btn-warning button" onclick="setSite2('newyorktimes')">New York Times</button>
+            <button class="btn btn-warning button" onclick="setSite2('youtube')">Youtube</button>
+          </div>
+
+          <div class="video-info">
+            <div id="status2"></div>
+          </div>
+
+          <div>
+            <video id="video2" controls>
+              <source id="source2" src="" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+      </div>
+
+  </body>
+</html>

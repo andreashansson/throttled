@@ -19,7 +19,7 @@
 
     <!--javascript -->
     <script src="js/jquery.js"></script>
-    <script src="js/script.js" type="text/javascript"></script>
+
 
     <!-- stylesheets -->
     <link rel="stylesheet" href="css/style.css" type="text/css">
@@ -28,31 +28,23 @@
 
   <body>
 
-      <header>
-        <div>hej</div>
-        <div>hej</div>
-        <div>hej</div>
-        <div>hej</div>
-        <div>hej</div>
-      </header>
-
       <div class="video-container"><!-- Borde ha row -->
         <div class="video1"><!-- Borde ha column -->
           <div class="button-container"><!-- Borde ha row -->
-            <button class="btn btn-info button" onclick="setSpeed1('160')">160 kb/s</button>
-            <button class="btn btn-info button" onclick="setSpeed1('256')">256 kb/s</button>
-            <button class="btn btn-info button" onclick="setSpeed1('512')">512 kb/s</button>
-            <button class="btn btn-info button" onclick="setSpeed1('1000')">1000 kb/s</button>
+            <div id="bad1" class="button">160 kb/s</div>
+            <div id="not_bad1" class="button">256 kb/s</div>
+            <div id="good1" class="button">512 kb/s</div>
+            <div id="very_good1" class="button">1000 kb/s</div>
           </div>
           <div class="button-container">
-            <button class="btn btn-success button" onclick="setSite1('google')">Google</button>
-            <button class="btn btn-success button" onclick="setSite1('microsoft')">Microsoft</button>
-            <button class="btn btn-success button" onclick="setSite1('newyorktimes')">New York Times</button>
-            <button class="btn btn-success button" onclick="setSite1('youtube')">Youtube</button>
+            <div id="google1" class="button">Google</div>
+            <div id="microsoft1" class="button">Microsoft</div>
+            <div id="nyt1" class="button">New York Times</div>
+            <div id="vimeo1" class="button">Vimeo</div>
           </div>
 
           <div class="video-info">
-            <div id="status1"></div>
+            <div id="status1">Choose speed and which site you want to throttle.</div>
           </div>
 
           <div>
@@ -60,35 +52,74 @@
               <source id="source1" src="" type="video/mp4">
             </video>
           </div>
-
+          <div class="video-info">
+            <div id="timeInfo1"></div>
+          </div>
         </div>
 
         <div class="video2">
           <div class="button-container"><!-- Borde ha row -->
-            <button class="btn btn-info button" onclick="setSpeed2('160')">160 kb/s</button>
-            <button class="btn btn-info button" onclick="setSpeed2('256')">256 kb/s</button>
-            <button class="btn btn-info button" onclick="setSpeed2('512')">512 kb/s</button>
-            <button class="btn btn-info button" onclick="setSpeed2('1000')">1000 kb/s</button>
+            <div id="bad2" class="button">160 kb/s</div>
+            <div id="not_bad2" class="button">256 kb/s</div>
+            <div id="good2" class="button">512 kb/s</div>
+            <div id="very_good2" class="button">1000 kb/s</div>
           </div>
           <div class="button-container">
-            <button class="btn btn-warning button" onclick="setSite2('google')">Google</button>
-            <button class="btn btn-warning button" onclick="setSite2('microsoft')">Microsoft</button>
-            <button class="btn btn-warning button" onclick="setSite2('newyorktimes')">New York Times</button>
-            <button class="btn btn-warning button" onclick="setSite2('youtube')">Youtube</button>
+            <div id="google2" class="button">Google</div>
+            <div id="microsoft2" class="button">Microsoft</div>
+            <div id="nyt2" class="button">New York Times</div>
+            <div id="vimeo2" class="button">Vimeo</div>
           </div>
 
           <div class="video-info">
-            <div id="status2"></div>
+            <div id="status2">Choose speed and which site you want to throttle.</div>
           </div>
 
           <div>
-            <video id="video2" controls>
+            <video id="video2" style="visibility:visible" controls>
               <source id="source2" src="" type="video/mp4">
             </video>
           </div>
+          <div class="video-info">
+            <div id="timeInfo2"></div>
+          </div>
         </div>
-
       </div>
 
+      <div class="player-container">
+        <div onclick="playBack()">Rewind</div>
+        <div onclick="playBoth()">Play</div>
+        <div onclick="stopBoth()">Stop</div>
+        <div onclick="fastForward()">Forward 5 sec</div>
+        <div onclick="showHideInfo()">Show / Hide Info</div>
+      </div>
+
+      <!--<div id="timeInfo"></div>-->
+
+      <div class="info-container">
+        <div id="info1" style="visibility:hidden">
+          <table>
+            <tr>
+              <td>Site</td><td>Speed</td><td>Time</td>
+            </tr>
+            <tr>
+              <td id="site1"></td><td id="speed1"></td><td id="time1"></td>
+            </tr>
+          </table>
+        </div>
+
+        <div id="info2" style="visibility:hidden">
+          <table>
+            <tr>
+              <td>Site</td><td>Speed</td><td>Time</td>
+            </tr>
+            <tr>
+              <td id="site2"></td><td id="speed2"></td><td id="time2"></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <script src="js/db.js" type="text/javascript"></script>
+      <script src="js/script.js" type="text/javascript"></script>
   </body>
 </html>

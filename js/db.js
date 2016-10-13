@@ -1,7 +1,6 @@
+var sites = new Object();
 
-var site = new Object();
-
-site = {
+sites = {
   speed: {
     bad: "160",
     not_bad: "256",
@@ -9,39 +8,35 @@ site = {
     very_good: "1000"
   },
   google: {
-    name: "google",
     loadTime: {
-      bad: "31 seconds",
-      not_bad: "21 seconds",
-      good: "10 seconds",
-      very_good: "3 seconds"
+      160: "31 seconds",
+      256: "22 seconds",
+      512: "9 seconds",
+      1000: "4 seconds"
     }
   },
   microsoft: {
-    name: "microsoft",
     loadTime: {
-      bad: "33 seconds",
-      not_bad: "25 seconds",
-      good: "16 seconds",
-      very_good: "8 seconds"
+      160: "15 seconds",
+      256: "8 seconds",
+      512: "7 seconds",
+      1000: "5 seconds"
     }
   },
   nyt: {
-    name: "newyorktimes",
     loadTime: {
-      bad: "55 seconds",
-      not_bad: "34 seconds",
-      good: "21 seconds",
-      very_good: "9 seconds"
+      160: "55 seconds",
+      256: "34 seconds",
+      512: "21 seconds",
+      1000: "9 seconds"
     }
   },
   vimeo: {
-    name: "vimeo",
     loadTime: {
-      bad: "2 min 31 seconds",
-      not_bad: "1 min 30 seconds",
-      good: "50 seconds",
-      very_good: "25 seconds"
+      160: "2 min 29 seconds",
+      256: "1 min 35 seconds",
+      512: "42 seconds",
+      1000: "22 seconds"
     }
   }
 }

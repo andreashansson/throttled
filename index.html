@@ -7,119 +7,118 @@
     <meta charset="utf-8" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
-
     <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-    <!--javascript -->
-    <script src="js/jquery.js"></script>
-
-
-    <!-- stylesheets -->
+     <!-- stylesheets -->
     <link rel="stylesheet" href="css/style.css" type="text/css">
 
   </head>
 
   <body>
 
-      <div class="video-container"><!-- Borde ha row -->
-        <div class="video1"><!-- Borde ha column -->
-          <div class="button-container"><!-- Borde ha row -->
-            <div id="bad1" class="button">160 kb/s</div>
-            <div id="not_bad1" class="button">256 kb/s</div>
-            <div id="good1" class="button">512 kb/s</div>
-            <div id="very_good1" class="button">1000 kb/s</div>
-          </div>
-          <div class="button-container">
-            <div id="google1" class="button">Google</div>
-            <div id="microsoft1" class="button">Microsoft</div>
-            <div id="nyt1" class="button">New York Times</div>
-            <div id="vimeo1" class="button">Vimeo</div>
-          </div>
-
-          <div class="video-info">
-            <div id="status1">Choose speed and which site you want to throttle.</div>
-          </div>
-
-          <div>
-            <video id="video1" controls>
-              <source id="source1" src="" type="video/mp4">
-            </video>
-          </div>
-          <div class="video-info">
-            <div id="timeInfo1"></div>
-          </div>
+    <div class="video-container"><!-- Borde ha row -->
+      <div class="video1"><!-- Borde ha column -->
+        <div class="button-container"><!-- Borde ha row -->
+          <div data-number="1" data-name="bad" class="button speedButton">160 kb/s</div>
+          <div data-number="1" data-name="not_bad" class="button speedButton">256 kb/s</div>
+          <div data-number="1" data-name="good" class="button speedButton">512 kb/s</div>
+          <div data-number="1" data-name="very_good" class="button speedButton">1000 kb/s</div>
+        </div>
+        <div class="button-container">
+          <div data-number="1" data-name="google" class="button siteButton">Google</div>
+          <div data-number="1" data-name="microsoft" class="button siteButton">Microsoft</div>
+          <div data-number="1" data-name="nyt" class="button siteButton">New York Times</div>
+          <div data-number="1" data-name="vimeo" class="button siteButton">Vimeo</div>
         </div>
 
-        <div class="video2">
-          <div class="button-container"><!-- Borde ha row -->
-            <div id="bad2" class="button">160 kb/s</div>
-            <div id="not_bad2" class="button">256 kb/s</div>
-            <div id="good2" class="button">512 kb/s</div>
-            <div id="very_good2" class="button">1000 kb/s</div>
-          </div>
-          <div class="button-container">
-            <div id="google2" class="button">Google</div>
-            <div id="microsoft2" class="button">Microsoft</div>
-            <div id="nyt2" class="button">New York Times</div>
-            <div id="vimeo2" class="button">Vimeo</div>
-          </div>
+        <div class="video-info">
+          <div id="status1">Choose speed and which site you want to throttle.</div>
+        </div>
 
-          <div class="video-info">
-            <div id="status2">Choose speed and which site you want to throttle.</div>
-          </div>
-
-          <div>
-            <video id="video2" style="visibility:visible" controls>
-              <source id="source2" src="" type="video/mp4">
-            </video>
-          </div>
-          <div class="video-info">
-            <div id="timeInfo2"></div>
-          </div>
+        <div>
+          <video id="video1" controls>
+            <source id="source1" src="" type="video/mp4">
+          </video>
+        </div>
+        <div class="video-info">
+          <div id="timeInfo1"></div>
         </div>
       </div>
 
-      <div class="player-container">
-        <div onclick="playBack()">Rewind</div>
-        <div onclick="playBoth()">Play</div>
-        <div onclick="stopBoth()">Stop</div>
-        <div onclick="fastForward()">Forward 5 sec</div>
-        <div onclick="showHideInfo()">Show / Hide Info</div>
-      </div>
-
-      <!--<div id="timeInfo"></div>-->
-
-      <div class="info-container">
-        <div id="info1" style="visibility:hidden">
-          <table>
-            <tr>
-              <td>Site</td><td>Speed</td><td>Time</td>
-            </tr>
-            <tr>
-              <td id="site1"></td><td id="speed1"></td><td id="time1"></td>
-            </tr>
-          </table>
+      <div class="video2">
+        <div class="button-container">
+          <div data-number="2" data-name="bad" class="button speedButton">160 kb/s</div>
+          <div data-number="2" data-name="not_bad" class="button speedButton">256 kb/s</div>
+          <div data-number="2" data-name="good" class="button speedButton">512 kb/s</div>
+          <div data-number="2" data-name="very_good" class="button speedButton">1000 kb/s</div>
+        </div>
+        <div class="button-container">
+          <div data-number="2" data-name="google" class="button siteButton">Google</div>
+          <div data-number="2" data-name="microsoft" class="button siteButton">Microsoft</div>
+          <div data-number="2" data-name="nyt" class="button siteButton">New York Times</div>
+          <div data-number="2" data-name="vimeo" class="button siteButton">Vimeo</div>
         </div>
 
-        <div id="info2" style="visibility:hidden">
-          <table>
-            <tr>
-              <td>Site</td><td>Speed</td><td>Time</td>
-            </tr>
-            <tr>
-              <td id="site2"></td><td id="speed2"></td><td id="time2"></td>
-            </tr>
-          </table>
+        <div class="video-info">
+          <div id="status2">Choose speed and which site you want to throttle.</div>
+        </div>
+
+        <div>
+          <video id="video2" controls>
+            <source id="source2" src="" type="video/mp4">
+          </video>
+        </div>
+        <div class="video-info">
+          <div id="timeInfo2"></div>
         </div>
       </div>
-      <script src="js/db.js" type="text/javascript"></script>
-      <script src="js/script.js" type="text/javascript"></script>
+    </div>
+
+    <div class="player-container">
+      <div onclick="playBack()">Rewind</div>
+      <div onclick="playBoth()">Play</div>
+      <div onclick="stopBoth()">Stop</div>
+      <div onclick="fastForward()">Forward 5 sec</div>
+      <div onclick="showHideInfo()">Show / Hide Info</div>
+    </div>
+
+    <div id="test" class="info-container">
+      <div id="info1" style="visibility:hidden">
+        <table>
+          <thead>
+            <tr>
+              <th>Site</th><th>Speed</th><th>Time</th>
+            </tr>
+          </thead>
+          <tr>
+            <td id="site1"></td><td id="speed1"></td><td id="time1"></td>
+          </tr>
+        </table>
+      </div>
+
+      <div id="info2" style="visibility:hidden">
+        <table>
+          <thead>
+            <tr>
+              <th>Site</th><th>Speed</th><th>Time</th>
+            </tr>
+          </thead>
+          <tr>
+            <td id="site2"></td><td id="speed2"></td><td id="time2"></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <script src="js/setgetfunctions.js"></script>
+    <script src="js/db.js" type="text/javascript"></script>
+    <script src="js/script.js" type="text/javascript"></script>
   </body>
 </html>

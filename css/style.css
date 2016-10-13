@@ -3,7 +3,6 @@ body {
 }
 
 .button-container {
-
   width: 100%;
 
   display: flex;
@@ -17,7 +16,6 @@ body {
 
   align-items: flex-start;
   -webkit-align-items: flex-start;
-
 }
 
 .button {
@@ -33,7 +31,6 @@ body {
   font-family: ff-din-round-web,sans-serif;
   font-size: 18px;
   cursor: pointer;
-
 }
 
 .video-container {
@@ -53,7 +50,6 @@ body {
 }
 
 .video1, .video2 {
-
   width: 100%;
 
   display: flex;
@@ -67,12 +63,9 @@ body {
 
   align-items: center;
   -webkit-align-items: center;
-
 }
 
-
 .video-info {
-
   width: 100%;
   height: 100px;
 
@@ -113,9 +106,9 @@ video {
 }
 
 .player-container {
-
   height: 50px;
   margin-top: 30px;
+  margin-bottom: 30px;
 
   //background-color: #265a88;
   //background-image: -webkit-linear-gradient(top, #337ab7 0%, #265a88 100%);
@@ -131,10 +124,9 @@ video {
 
   align-items: center;
 	-webkit-align-items: center;
-
 }
-.player-container div {
 
+.player-container div {
   width: 200px;
   height: 40px;
   margin: 5px;
@@ -145,14 +137,12 @@ video {
   font-family: ff-din-round-web,sans-serif;
   font-size: 17px;
   color: #0083c7;
-
 }
 
 .player-container div:hover {
   background-image: -webkit-linear-gradient(top, #337ab7 0%, #265a88 100%);
   font-family: ff-din-round-web,sans-serif;
   color: white;
-
 }
 
 #info1, #info2 {
@@ -160,7 +150,6 @@ video {
 }
 
 .info-container {
-
     display: flex;
   	display: -webkit-flex;
 
@@ -176,17 +165,27 @@ video {
 
 table {
   border-collapse: collapse;
-  margin-top: 20px;
 }
 
 table, tr, td, th {
   border: 2px solid #337ab7;
 }
 
-td {
+thead {
+  background-color: #337ab7;
+}
+
+td, th {
   width: 200px;
-  height: 30px;
-  color: #337ab7;
+  height: 35px;
   text-align: center;
-  font-size: 20px;
+  font-size: 17px;
+}
+
+td {
+  color: #337ab7;
+}
+
+th {
+  color: white;
 }
